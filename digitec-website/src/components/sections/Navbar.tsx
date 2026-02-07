@@ -41,7 +41,7 @@ export const Navbar = () => {
         >
             <Container>
                 <div className="flex items-center justify-between h-16 md:h-20">
-                    <Logo variant={isScrolled ? "default" : "white"} />
+                    <Logo variant="default" />
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
@@ -54,8 +54,7 @@ export const Navbar = () => {
                                     document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
                                 }}
                                 className={cn(
-                                    "text-sm font-medium transition-colors",
-                                    isScrolled ? "text-[#1E293B] hover:text-primary" : "text-white/80 hover:text-white"
+                                    "text-sm font-medium transition-colors text-[#1E293B] hover:text-primary"
                                 )}
                             >
                                 {link.name}
@@ -64,12 +63,7 @@ export const Navbar = () => {
                         <Button
                             variant="primary"
                             size="sm"
-                            className={cn(
-                                "border-0 shadow-sm transition-all",
-                                isScrolled
-                                    ? "bg-primary text-white hover:bg-primary-dark"
-                                    : "bg-white/10 hover:bg-white/20 text-white"
-                            )}
+                            className="border-0 shadow-sm transition-all bg-primary text-white hover:bg-primary-dark"
                             onClick={() => document.querySelector(ROUTES.CONTACT)?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             Cotizar
@@ -78,10 +72,7 @@ export const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className={cn(
-                            "md:hidden p-2 transition-colors",
-                            isScrolled ? "text-[#1E293B]" : "text-white"
-                        )}
+                        className="md:hidden p-2 transition-colors text-[#1E293B]"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
