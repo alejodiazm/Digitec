@@ -62,18 +62,18 @@ export const ContactForm = ({ className }: ContactFormProps) => {
         }
     };
 
-    const inputClasses = "w-full px-0 py-3 bg-transparent border-b border-white/20 focus:border-primary outline-none transition-all placeholder:text-slate-500 text-white focus:ring-0 rounded-none";
+    const inputClasses = "w-full px-0 py-3 bg-transparent border-b border-black/10 focus:border-primary outline-none transition-all placeholder:text-slate-400 text-[#1E293B] focus:ring-0 rounded-none font-medium";
 
     return (
         <motion.div
-            className={cn("bg-[#151F32]/50 backdrop-blur-md p-8 rounded-2xl border border-white/5", className)}
+            className={cn("bg-white p-8 rounded-2xl border border-black/5 shadow-xl shadow-black/[0.02]", className)}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
         >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-slate-400 block">
+                    <label htmlFor="name" className="text-sm font-bold text-[#475569] block">
                         {CONTACT_FORM.fields.name}
                     </label>
                     <input
@@ -92,7 +92,7 @@ export const ContactForm = ({ className }: ContactFormProps) => {
                 </div>
 
                 <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-slate-400 block">
+                    <label htmlFor="email" className="text-sm font-bold text-[#475569] block">
                         {CONTACT_FORM.fields.email}
                     </label>
                     <input
@@ -112,7 +112,7 @@ export const ContactForm = ({ className }: ContactFormProps) => {
                 </div>
 
                 <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-slate-400 block">
+                    <label htmlFor="message" className="text-sm font-bold text-[#475569] block">
                         {CONTACT_FORM.fields.message}
                     </label>
                     <textarea
@@ -139,7 +139,7 @@ export const ContactForm = ({ className }: ContactFormProps) => {
                             sitekey={env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
                             onVerify={(token) => setToken(token)}
                             onExpire={() => setToken(null)}
-                            theme="dark"
+                            theme="light"
                         />
                     </div>
 

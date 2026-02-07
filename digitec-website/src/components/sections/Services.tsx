@@ -15,7 +15,7 @@ const strategies = [
         title: "Dar Vida (Creación)",
         description: "Tomamos tu visión desde su estado más pura y construimos su primer hogar en la web. Una base fuerte y acogedora, lista para recibir a tus visitantes.",
         highlight: "Ideal para Nuevos Negocios",
-        color: "indigo-brand",
+        color: "accent-mint",
         image: "/images/Isotipo Digitec.png"
     },
     {
@@ -31,28 +31,28 @@ const strategies = [
         title: "Renovar el Impacto (Transformación)",
         description: "Ayudamos a mudar de piel. Rediseñamos identidad y tecnología para reconectar con el mundo de forma moderna, elegante e imposible de ignorar.",
         highlight: "Evolución Empresarial Completa",
-        color: "cyan-brand",
+        color: "accent-lavender",
         image: "/images/Logo_Iso.png"
     },
 ];
 
 export const Services = () => {
     return (
-        <section id="servicios" className="py-24 bg-[#111827] relative overflow-hidden">
+        <section id="servicios" className="py-24 bg-[#F1F5F9] relative overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-dark/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-mint/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent-lavender/5 rounded-full blur-3xl pointer-events-none" />
 
             <Container>
                 <div className="mb-20 text-center max-w-3xl mx-auto">
                     <ScrollReveal>
-                        <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-bold mb-4 border border-primary/20">
+                        <span className="inline-block py-1 px-3 rounded-full bg-primary/5 text-primary text-sm font-bold mb-4 border border-primary/10">
                             NUESTRO PROCESO
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-3xl md:text-5xl font-bold text-[#1E293B] mb-6">
                             ¿Qué hace DIGITEC en el mercado?
                         </h2>
-                        <p className="text-slate-400 text-lg leading-relaxed">
+                        <p className="text-[#475569] text-lg leading-relaxed font-medium">
                             Nuestro trabajo es guiar a las marcas a través de su propio proceso de renovación.
                             No solo entregamos productos; facilitamos una transición exitosa hacia el mundo digital.
                         </p>
@@ -83,25 +83,25 @@ export const Services = () => {
                                 <div className="mb-8 h-40 w-full">
                                     <EvervaultCard
                                         text={stage.title.split(" ")[0]}
-                                        className="rounded-2xl border border-white/5"
+                                        className="rounded-2xl border border-black/5"
                                     />
                                 </div>
 
                                 <div className="mb-4">
-                                    <span className="text-xs font-bold uppercase tracking-wider opacity-60"
+                                    <span className="text-xs font-bold uppercase tracking-wider opacity-80"
                                         style={{ color: `var(--color-${stage.color})` }}
                                     >
                                         Etapa {index + 1}
                                     </span>
-                                    <h3 className="text-2xl font-bold text-white mt-2 mb-3">{stage.title}</h3>
+                                    <h3 className="text-2xl font-bold text-[#1E293B] mt-2 mb-3">{stage.title}</h3>
                                 </div>
 
-                                <p className="text-slate-400 leading-relaxed mb-6 relative z-10">
+                                <p className="text-[#475569] leading-relaxed mb-6 relative z-10 font-medium">
                                     {stage.description}
                                 </p>
 
-                                <div className="mt-auto pt-4 border-t border-white/5">
-                                    <span className="text-xs font-medium text-slate-500 bg-white/5 px-2 py-1 rounded">
+                                <div className="mt-auto pt-4 border-t border-black/5">
+                                    <span className="text-xs font-semibold text-slate-400 bg-black/5 px-2 py-1 rounded">
                                         {stage.highlight}
                                     </span>
                                 </div>
@@ -112,33 +112,33 @@ export const Services = () => {
 
                 {/* Differential Section */}
                 <ScrollReveal>
-                    <div className="bg-[#0B1121]/50 border border-white/5 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                    <div className="bg-white/80 border border-black/5 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-xl shadow-black/[0.02]">
                         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent pointer-events-none" />
 
                         <div className="relative z-10 flex flex-col md:flex-row items-center gap-10">
                             <div className="flex-1">
-                                <h3 className="text-2xl font-bold text-white mb-4">
+                                <h3 className="text-2xl font-bold text-[#1E293B] mb-4">
                                     Nuestro Diferencial: &quot;Acompañamiento en cada etapa&quot;
                                 </h3>
-                                <p className="text-slate-400 leading-relaxed mb-6">
+                                <p className="text-[#475569] leading-relaxed mb-6 font-medium">
                                     A diferencia de quienes solo ven códigos o pixeles, en DIGITEC entendemos el esfuerzo que hay detrás de cada proyecto. Por eso, optimizamos nuestros procesos y recursos (como nuestra propia infraestructura) para que el cambio no sea un peso, sino una transición natural y emocionante.
                                 </p>
-                                <p className="text-primary text-sm font-medium mb-6 italic">
+                                <p className="text-primary text-sm font-semibold mb-6 italic">
                                     En resumen: Somos el aliado que prepara el terreno, diseña las alas y se asegura de que tu marca siempre tenga el impulso necesario para seguir evolucionando.
                                 </p>
-                                <div className="flex items-center gap-4 text-sm font-medium text-white">
-                                    <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+                                <div className="flex items-center gap-4 text-sm font-bold text-[#1E293B]">
+                                    <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20 text-white">
                                         <Feather size={20} />
                                     </div>
                                     <span>Somos el aliado que diseña tus alas.</span>
                                 </div>
                             </div>
 
-                            <div className="w-full md:w-1/3 aspect-video rounded-xl bg-gradient-to-br from-primary/20 to-purple-500/10 flex items-center justify-center border border-white/10 relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+                            <div className="w-full md:w-1/3 aspect-video rounded-xl bg-gradient-to-br from-primary/10 to-accent-lavender/5 flex items-center justify-center border border-black/5 relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5" />
                                 <div className="text-center relative z-10 p-6">
-                                    <span className="block text-4xl font-bold text-white mb-1">100%</span>
-                                    <span className="text-sm text-slate-400 uppercase tracking-widest">Compromiso</span>
+                                    <span className="block text-4xl font-bold text-[#1E293B] mb-1">100%</span>
+                                    <span className="text-sm text-[#475569] font-bold uppercase tracking-widest">Compromiso</span>
                                 </div>
                             </div>
                         </div>

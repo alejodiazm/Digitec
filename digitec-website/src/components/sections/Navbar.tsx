@@ -33,7 +33,7 @@ export const Navbar = () => {
         <motion.header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-                isScrolled ? "bg-[#0B1121]/80 backdrop-blur-md border-white/5" : "bg-transparent"
+                isScrolled ? "bg-white/70 backdrop-blur-md border-black/5" : "bg-transparent"
             )}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -41,7 +41,7 @@ export const Navbar = () => {
         >
             <Container>
                 <div className="flex items-center justify-between h-16 md:h-20">
-                    <Logo variant="white" />
+                    <Logo variant={isScrolled ? "default" : "white"} />
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
@@ -53,7 +53,10 @@ export const Navbar = () => {
                                     e.preventDefault();
                                     document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                                className={cn(
+                                    "text-sm font-medium transition-colors",
+                                    isScrolled ? "text-[#1E293B] hover:text-primary" : "text-white/80 hover:text-white"
+                                )}
                             >
                                 {link.name}
                             </Link>
@@ -61,7 +64,12 @@ export const Navbar = () => {
                         <Button
                             variant="primary"
                             size="sm"
-                            className="bg-white/10 hover:bg-white/20 text-white border-0"
+                            className={cn(
+                                "border-0 shadow-sm transition-all",
+                                isScrolled
+                                    ? "bg-primary text-white hover:bg-primary-dark"
+                                    : "bg-white/10 hover:bg-white/20 text-white"
+                            )}
                             onClick={() => document.querySelector(ROUTES.CONTACT)?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             Cotizar
@@ -70,7 +78,10 @@ export const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2 text-slate-300 hover:text-white"
+                        className={cn(
+                            "md:hidden p-2 transition-colors",
+                            isScrolled ? "text-[#1E293B]" : "text-white"
+                        )}
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -86,7 +97,7 @@ export const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-[#0B1121] border-b border-white/10 overflow-hidden"
+                        className="md:hidden bg-white border-b border-black/10 overflow-hidden"
                     >
                         <Container className="py-4 flex flex-col gap-4">
                             {navLinks.map((link) => (
@@ -98,7 +109,7 @@ export const Navbar = () => {
                                         document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
                                         setIsMobileMenuOpen(false);
                                     }}
-                                    className="text-slate-300 font-medium py-2 hover:text-white block"
+                                    className="text-[#1E293B] font-medium py-2 hover:text-primary block"
                                 >
                                     {link.name}
                                 </Link>

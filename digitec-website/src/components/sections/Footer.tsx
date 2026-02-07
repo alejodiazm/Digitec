@@ -8,20 +8,20 @@ import Link from "next/link";
 
 export const Footer = () => {
     return (
-        <footer className="bg-neutral-50 border-t border-neutral-100 pt-16 pb-8">
+        <footer className="bg-[#F1F5F9] border-t border-black/5 pt-16 pb-8">
             <Container>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand Info */}
                     <div className="md:col-span-2 space-y-4">
                         <Logo />
-                        <p className="text-neutral-500 max-w-sm mt-4 leading-relaxed">
+                        <p className="text-[#475569] max-w-sm mt-4 leading-relaxed font-medium">
                             {COMPANY_INFO.tagline}. Transformamos negocios a través de soluciones tecnológicas robustas y diseño estratégico.
                         </p>
                         <div className="flex items-center gap-4 mt-6">
-                            <Link href={COMPANY_INFO.social.linkedin} target="_blank" className="p-2 rounded-full bg-white border border-neutral-200 text-neutral-600 hover:text-primary hover:border-primary transition-colors">
+                            <Link href={COMPANY_INFO.social.linkedin} target="_blank" className="p-2 rounded-full bg-white border border-black/10 text-[#475569] hover:text-primary hover:border-primary transition-colors shadow-sm">
                                 <Linkedin size={20} />
                             </Link>
-                            <Link href={COMPANY_INFO.social.instagram} target="_blank" className="p-2 rounded-full bg-white border border-neutral-200 text-neutral-600 hover:text-primary hover:border-primary transition-colors">
+                            <Link href={COMPANY_INFO.social.instagram} target="_blank" className="p-2 rounded-full bg-white border border-black/10 text-[#475569] hover:text-primary hover:border-primary transition-colors shadow-sm">
                                 <Instagram size={20} />
                             </Link>
                         </div>
@@ -29,7 +29,7 @@ export const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="font-bold text-neutral-900 mb-6 font-heading">Enlaces</h3>
+                        <h3 className="font-bold text-[#1E293B] mb-6 font-heading">Enlaces</h3>
                         <ul className="space-y-3">
                             {[
                                 { name: "Inicio", href: ROUTES.HOME },
@@ -44,7 +44,7 @@ export const Footer = () => {
                                             e.preventDefault();
                                             document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
                                         }}
-                                        className="text-neutral-600 hover:text-primary transition-colors"
+                                        className="text-[#475569] font-medium hover:text-primary transition-colors"
                                     >
                                         {link.name}
                                     </Link>
@@ -55,17 +55,17 @@ export const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="font-bold text-neutral-900 mb-6 font-heading">Contacto</h3>
+                        <h3 className="font-bold text-[#1E293B] mb-6 font-heading">Contacto</h3>
                         <ul className="space-y-4">
                             <li>
-                                <span className="block text-sm text-neutral-400 mb-1">Email</span>
-                                <a href={`mailto:${COMPANY_INFO.email}`} className="text-neutral-600 hover:text-primary transition-colors">
+                                <span className="block text-sm text-[#94A3B8] font-bold mb-1 uppercase tracking-wider">Email</span>
+                                <a href={`mailto:${COMPANY_INFO.email}`} className="text-[#475569] font-medium hover:text-primary transition-colors">
                                     {COMPANY_INFO.email}
                                 </a>
                             </li>
                             <li>
-                                <span className="block text-sm text-neutral-400 mb-1">WhatsApp</span>
-                                <a href={COMPANY_INFO.whatsapp.link} target="_blank" className="text-neutral-600 hover:text-primary transition-colors">
+                                <span className="block text-sm text-[#94A3B8] font-bold mb-1 uppercase tracking-wider">WhatsApp</span>
+                                <a href={COMPANY_INFO.whatsapp.link} target="_blank" className="text-[#475569] font-medium hover:text-primary transition-colors">
                                     {COMPANY_INFO.whatsapp.number}
                                 </a>
                             </li>
@@ -73,9 +73,9 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-neutral-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
+                <div className="border-t border-black/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#94A3B8]">
                     <p>© {COMPANY_INFO.year} {COMPANY_INFO.name}. Todos los derechos reservados.</p>
-                    <div className="flex gap-6">
+                    <div className="flex gap-6 font-medium">
                         <Link href="#" className="hover:text-primary">Política de Privacidad</Link>
                         <Link href="#" className="hover:text-primary">Términos y Condiciones</Link>
                     </div>

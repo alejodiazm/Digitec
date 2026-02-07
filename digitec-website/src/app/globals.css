@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0B1121;
-  --color-surface: #151F32;
-  --color-primary: #3A8DFF;
-  --color-primary-dark: #1D4F8C;
+  --color-background: #F8FAFC;
+  --color-surface: #F1F5F9;
+  --color-primary: #3B82F6;
+  --color-primary-dark: #1E3A8A;
   --color-primary-light: #60A5FA;
 
-  /* Expanded Palette - Phase 4 */
+  /* Premium Light Evolution Palette - Phase 7 */
   --color-indigo-brand: #4F46E5;
-  --color-violet-brand: #7C3AED;
+  --color-violet-brand: #8B5CF6;
   --color-cyan-brand: #06B6D4;
   --color-amber-brand: #F59E0B;
 
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #94A3B8;
-  --color-border: rgba(255, 255, 255, 0.08);
+  --color-accent-mint: #2DD4BF;
+  --color-accent-lavender: #8B5CF6;
+  --color-accent-coral: #FB923C;
+
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #475569;
+  --color-border: rgba(30, 41, 59, 0.08);
 
   --font-sans: "Montserrat", "Inter", sans-serif;
   --font-heading: "Montserrat", "Inter", sans-serif;
@@ -66,8 +70,9 @@
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  filter: contrast(120%) brightness(120%);
 }
 
 .text-gradient-indigo {
@@ -85,8 +90,8 @@
 }
 
 :root {
-  --background: #0B1121;
-  --foreground: #FFFFFF;
+  --background: #F8FAFC;
+  --foreground: #1E293B;
 }
 
 body {
@@ -97,22 +102,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Linear-style Utilities */
+/* Premium Light Utilities */
 .glass-panel {
-  background: rgba(11, 17, 33, 0.7);
+  background: rgba(248, 250, 252, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
 }
 
 .card-glow {
-  background: rgba(21, 31, 50, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--color-border);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card-glow:hover {
-  border-color: rgba(58, 141, 255, 0.3);
-  box-shadow: 0 0 30px -10px rgba(58, 141, 255, 0.15);
-  transform: translateY(-2px);
+  border-color: var(--color-primary-light);
+  box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.1);
+  transform: translateY(-4px);
 }

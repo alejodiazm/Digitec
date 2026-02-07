@@ -60,9 +60,9 @@ export const TracingBeam = ({
                         boxShadow:
                             scrollYProgress.get() > 0
                                 ? "none"
-                                : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                                : "rgba(0, 0, 0, 0.1) 0px 3px 8px",
                     }}
-                    className="ml-[27px] h-4 w-4 rounded-full border border-netural-200 shadow-sm flex items-center justify-center"
+                    className="ml-[27px] h-4 w-4 rounded-full border border-neutral-300 shadow-sm flex items-center justify-center bg-white"
                 >
                     <motion.div
                         transition={{
@@ -88,8 +88,8 @@ export const TracingBeam = ({
                     <motion.path
                         d={`M 1 0 V ${svgHeight * 0.8} l 18 24 V ${svgHeight}`}
                         fill="none"
-                        stroke="#9091A0"
-                        strokeOpacity="0.16"
+                        stroke="#1E293B"
+                        strokeOpacity="0.08"
                         transition={{
                             duration: 10,
                         }}
@@ -113,10 +113,10 @@ export const TracingBeam = ({
                             y1={y1}
                             y2={y2}
                         >
-                            <stop stopColor="#18CCFC" stopOpacity="0"></stop>
-                            <stop stopColor="#18CCFC"></stop>
-                            <stop stopColor="#6344F5"></stop>
-                            <stop stopColor="#AE48FF" stopOpacity="0"></stop>
+                            <stop stopColor="#3B82F6" stopOpacity="0"></stop>
+                            <stop stopColor="#3B82F6"></stop>
+                            <stop stopColor="#8B5CF6"></stop>
+                            <stop stopColor="#2DD4BF" stopOpacity="0"></stop>
                         </motion.linearGradient>
                     </defs>
                 </svg>

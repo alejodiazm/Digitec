@@ -62,7 +62,7 @@ class Particle {
     }
 
     draw(ctx: CanvasRenderingContext2D) {
-        ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+        ctx.fillStyle = "rgba(30, 41, 59, 0.15)";
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -83,7 +83,7 @@ export const NetworkCanvas = () => {
         let height = (canvas.height = window.innerHeight);
 
         const particles: Particle[] = [];
-        const particleCount = Math.min(window.innerWidth / 10, 100);
+        const particleCount = Math.min(window.innerWidth / 8, 120);
         const connectionDistance = 150;
         const mouseDistance = 200;
 
@@ -107,7 +107,7 @@ export const NetworkCanvas = () => {
 
                     if (distance < connectionDistance) {
                         const opacity = 1 - distance / connectionDistance;
-                        ctx.strokeStyle = `rgba(58, 141, 255, ${opacity * 0.2})`;
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${opacity * 0.15})`;
                         ctx.lineWidth = 1;
                         ctx.beginPath();
                         ctx.moveTo(particles[a].x, particles[a].y);

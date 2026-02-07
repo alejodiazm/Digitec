@@ -222,10 +222,10 @@ export const Pricing = ({ className }: PricingProps) => {
     const [category, setCategory] = useState<Category>("web");
 
     return (
-        <section id="planes" className={cn("py-24 relative overflow-hidden bg-gradient-to-b from-[#0B1121] to-[#151F32]", className)}>
+        <section id="planes" className={cn("py-24 relative overflow-hidden bg-[#F8FAFC]", className)}>
             {/* Background Texture */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
-                backgroundImage: "radial-gradient(#3A8DFF 1px, transparent 1px)",
+            <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{
+                backgroundImage: "radial-gradient(#3B82F6 1px, transparent 1px)",
                 backgroundSize: "40px 40px"
             }} />
 
@@ -246,10 +246,10 @@ export const Pricing = ({ className }: PricingProps) => {
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                                    <h2 className="text-3xl md:text-5xl font-bold text-[#1E293B] mb-6">
                                         {categoryInfo[category].title}
                                     </h2>
-                                    <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
+                                    <p className="text-[#475569] text-lg leading-relaxed max-w-2xl mx-auto font-medium">
                                         {categoryInfo[category].description}
                                     </p>
                                 </motion.div>
@@ -257,12 +257,12 @@ export const Pricing = ({ className }: PricingProps) => {
                         </div>
 
                         {/* Category Switcher */}
-                        <div className="inline-flex p-1 bg-white/5 rounded-xl border border-white/5 backdrop-blur-sm">
+                        <div className="inline-flex p-1 bg-black/5 rounded-xl border border-black/5 backdrop-blur-sm">
                             <button
                                 onClick={() => setCategory("web")}
                                 className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${category === "web"
                                     ? "bg-primary text-white shadow-lg"
-                                    : "text-slate-400 hover:text-white hover:bg-white/5"
+                                    : "text-[#475569] hover:text-[#1E293B] hover:bg-black/5"
                                     }`}
                             >
                                 Desarrollo Web
@@ -270,8 +270,8 @@ export const Pricing = ({ className }: PricingProps) => {
                             <button
                                 onClick={() => setCategory("branding")}
                                 className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${category === "branding"
-                                    ? "bg-purple-600 text-white shadow-lg"
-                                    : "text-slate-400 hover:text-white hover:bg-white/5"
+                                    ? "bg-accent-lavender text-white shadow-lg"
+                                    : "text-[#475569] hover:text-[#1E293B] hover:bg-black/5"
                                     }`}
                             >
                                 Branding & Diseño
@@ -290,9 +290,9 @@ export const Pricing = ({ className }: PricingProps) => {
                                     exit={{ opacity: 0, y: -20 }}
                                     className={`relative h-full p-6 sm:p-8 rounded-2xl border transition-all duration-300 flex flex-col group ${plan.highlight
                                         ? category === "web"
-                                            ? "bg-[#0f172a] border-amber-brand/50 shadow-2xl shadow-amber-brand/10 ring-1 ring-amber-brand/20"
-                                            : "bg-[#0f172a] border-purple-500/50 shadow-2xl shadow-purple-500/10 ring-1 ring-purple-500/20"
-                                        : "bg-[#0B1121]/80 border-white/5 hover:border-white/10"
+                                            ? "bg-white border-accent-coral shadow-2xl shadow-accent-coral/10 ring-1 ring-accent-coral/20"
+                                            : "bg-white border-accent-lavender shadow-2xl shadow-accent-lavender/10 ring-1 ring-accent-lavender/20"
+                                        : "bg-white/60 border-black/5 hover:border-black/10 shadow-lg shadow-black/[0.02]"
                                         }`}
                                     whileHover={{ y: -5 }}
                                 >
@@ -309,34 +309,34 @@ export const Pricing = ({ className }: PricingProps) => {
                                     )}
 
                                     {plan.highlight && (
-                                        <div className={`absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg flex items-center gap-2 ${category === "web" ? "bg-amber-brand" : "bg-purple-600"
+                                        <div className={`absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg flex items-center gap-2 ${category === "web" ? "bg-accent-coral" : "bg-accent-lavender"
                                             }`}>
                                             <Zap size={12} fill="currentColor" /> Recomendado
                                         </div>
                                     )}
 
                                     {/* Header */}
-                                    <div className="mb-6 pb-6 border-b border-white/5">
+                                    <div className="mb-6 pb-6 border-b border-black/5">
                                         <div className="flex justify-between items-start mb-4">
                                             <div className={`p-3 rounded-xl ${plan.highlight
-                                                ? category === "web" ? "bg-primary text-white" : "bg-purple-600 text-white"
-                                                : "bg-white/5 text-slate-300"
+                                                ? category === "web" ? "bg-primary text-white" : "bg-accent-lavender text-white"
+                                                : "bg-black/5 text-[#475569]"
                                                 }`}>
                                                 <plan.icon size={28} />
                                             </div>
                                         </div>
 
-                                        <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                                        <p className="text-slate-400 text-sm leading-relaxed mb-4 h-16 line-clamp-3">
+                                        <h3 className="text-2xl font-bold text-[#1E293B] mb-2">{plan.name}</h3>
+                                        <p className="text-[#475569] text-sm leading-relaxed mb-4 h-16 line-clamp-3">
                                             {plan.description}
                                         </p>
 
                                         <div className="flex flex-col mt-4">
                                             <div className="flex items-baseline gap-1">
-                                                <span className="text-3xl font-bold text-white tracking-tight">{plan.price}</span>
-                                                <span className="text-slate-500 text-sm font-medium">COP</span>
+                                                <span className="text-3xl font-bold text-[#1E293B] tracking-tight">{plan.price}</span>
+                                                <span className="text-[#475569] text-sm font-medium">COP</span>
                                             </div>
-                                            <div className="text-xs text-slate-500 mt-1">
+                                            <div className="text-xs text-[#475569] mt-1">
                                                 {category === "web" ? "Renovación: " : ""}<span className="text-slate-400">{plan.renewal}</span>
                                             </div>
                                         </div>
@@ -346,7 +346,7 @@ export const Pricing = ({ className }: PricingProps) => {
                                     <div className="flex-grow space-y-8">
                                         {plan.sections.map((section, idx) => (
                                             <div key={idx}>
-                                                <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+                                                <h4 className="text-xs font-bold text-[#94A3B8] uppercase tracking-widest mb-4 flex items-center gap-2">
                                                     {section.title.includes("Infraestructura") || section.title.includes("Kit") ?
                                                         <Server size={14} /> : <Globe size={14} />
                                                     }
@@ -354,10 +354,10 @@ export const Pricing = ({ className }: PricingProps) => {
                                                 </h4>
                                                 <ul className="space-y-3">
                                                     {section.features.map((feature, fIdx) => (
-                                                        <li key={fIdx} className="flex items-start gap-3 text-sm text-slate-300">
+                                                        <li key={fIdx} className="flex items-start gap-3 text-sm text-[#475569]">
                                                             <Check className={`w-4 h-4 shrink-0 mt-0.5 ${plan.highlight
-                                                                ? category === "web" ? "text-primary" : "text-purple-500"
-                                                                : "text-emerald-500"
+                                                                ? category === "web" ? "text-primary" : "text-accent-lavender"
+                                                                : "text-accent-mint"
                                                                 }`} />
                                                             <span className="leading-tight">{feature}</span>
                                                         </li>
@@ -368,13 +368,13 @@ export const Pricing = ({ className }: PricingProps) => {
                                     </div>
 
                                     {/* CTA */}
-                                    <div className="mt-8 pt-6 border-t border-white/5">
+                                    <div className="mt-8 pt-6 border-t border-black/5">
                                         <Button
                                             className={`w-full py-6 text-base ${plan.highlight
                                                 ? category === "web"
                                                     ? "bg-primary hover:bg-primary-dark shadow-lg shadow-primary/20"
-                                                    : "bg-purple-600 hover:bg-purple-700 shadow-lg shadow-purple-500/20"
-                                                : "bg-white/5 hover:bg-white/10 text-white border border-white/5"
+                                                    : "bg-accent-lavender hover:bg-accent-lavender/90 shadow-lg shadow-accent-lavender/20"
+                                                : "bg-[#F8FAFC] hover:bg-black/5 text-[#1E293B] border border-black/5"
                                                 }`}
                                             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
                                         >
