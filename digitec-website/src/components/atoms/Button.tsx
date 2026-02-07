@@ -27,7 +27,7 @@ export const Button = ({
     as,
     ...props
 }: ButtonProps) => {
-    const Component = as || motion.button;
+    const Component = (as as any) || motion.button;
 
     const variants = {
         primary: "bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20 border border-transparent",

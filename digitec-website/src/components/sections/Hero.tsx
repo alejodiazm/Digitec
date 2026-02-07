@@ -16,17 +16,17 @@ export const Hero = () => {
                 <NetworkCanvas />
             </div>
 
-            <Container className="relative z-10 pt-20">
-                <Lamp className="pt-40">
-                    <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
+            <Container className="relative z-10 pt-16 md:pt-20">
+                <Lamp className="pt-24 md:pt-40">
+                    <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6 md:space-y-8">
                         {/* Badge */}
                         <ScrollReveal>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 backdrop-blur-md mb-4">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 border border-primary/10 backdrop-blur-md mb-2 md:mb-4">
                                 <span className="relative flex h-2 w-2">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-mint opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-mint"></span>
                                 </span>
-                                <span className="text-xs font-semibold uppercase tracking-wider text-[#475569]">
+                                <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#475569]">
                                     Disponible para nuevos proyectos
                                 </span>
                             </div>
@@ -34,19 +34,19 @@ export const Hero = () => {
 
                         {/* Headline */}
                         <ScrollReveal delay={0.2}>
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#1E293B] leading-[1.1]">
-                                Transformamos ideas en <br />
+                            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-main leading-[1] px-4">
+                                Tecnología que <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent-lavender to-accent-mint animate-gradient-x">
-                                    Ecosistemas Digitales
+                                    Impulsa tu Éxito
                                 </span>
                             </h1>
                         </ScrollReveal>
 
                         {/* Description */}
                         <ScrollReveal delay={0.4}>
-                            <div className="text-lg md:text-xl text-[#475569] max-w-2xl mx-auto leading-relaxed font-medium">
+                            <div className="text-base md:text-xl text-sub max-w-3xl mx-auto leading-relaxed font-light px-4 tracking-tight">
                                 <TextGenerateEffect
-                                    words="Agencia de desarrollo de software de alto rendimiento. Creamos experiencias web, móviles y cloud que definen el futuro de tu industria."
+                                    words="Somos el brazo tecnológico que convierte ideas en realidades de alto impacto, acompañando cada etapa de tu vuelo empresarial con ingeniería impecable."
                                     className="text-inherit"
                                 />
                             </div>
@@ -68,7 +68,7 @@ export const Hero = () => {
                                     variant="outline"
                                     size="lg"
                                     onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="border-black/5 text-[#1E293B] hover:bg-black/5 bg-white/50 backdrop-blur-sm"
+                                    className="border-black/5 text-main hover:bg-black/5 bg-white/50 backdrop-blur-sm"
                                 >
                                     Agendar Reunión
                                 </Button>

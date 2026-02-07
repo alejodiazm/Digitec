@@ -1,6 +1,6 @@
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, PointMaterialProps } from "@react-three/drei";
+import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
 // Actually, maath is often not installed by default with R3F templates, check package.json.
 // package.json has three, @react-three/fiber, @react-three/drei. It does NOT have maath.
@@ -29,7 +29,7 @@ function generateSpherePoints(count: number, radius: number) {
     return points;
 }
 
-const ParticleField = (props: any) => {
+const ParticleField = (props: Partial<THREE.Points>) => {
     const ref = useRef<THREE.Points>(null);
     // Generate 2000 points inside a sphere of radius 1.5
     const sphere = useMemo(() => generateSpherePoints(3000, 1.8), []);

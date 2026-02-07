@@ -23,18 +23,22 @@
 # misc
 .DS_Store
 *.pem
-
-# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (Bloqueamos los reales, permitimos el ejemplo)
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+!.env.example
 
-# vercel
+# vercel & sentry
 .vercel
+.sentry-debug-log
 
 # typescript
 *.tsbuildinfo

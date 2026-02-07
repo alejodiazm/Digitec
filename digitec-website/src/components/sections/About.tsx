@@ -12,9 +12,9 @@ interface AboutProps {
 
 export const About = ({ className }: AboutProps) => {
     return (
-        <section id="nosotros" className={cn("py-32 bg-[#F1F5F9] relative overflow-hidden", className)}>
+        <section id="nosotros" className={cn("py-20 md:py-32 bg-[#F1F5F9] relative overflow-hidden", className)}>
             {/* Subtle Butterfly Watermark */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] opacity-[0.01] pointer-events-none grayscale select-none">
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] opacity-[0.01] pointer-events-none grayscale select-none">
                 <NextImage
                     src="/images/Mariposa.png"
                     alt="Metamorphosis Watermark"
@@ -24,22 +24,22 @@ export const About = ({ className }: AboutProps) => {
             </div>
 
             <Container className="relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
                     <div>
                         <ScrollReveal>
-                            <h2 className="text-sm font-semibold text-primary mb-6 tracking-widest uppercase">
+                            <h2 className="text-xs font-medium text-primary mb-4 md:mb-6 tracking-[0.3em] uppercase">
                                 Nuestra Esencia
                             </h2>
-                            <h3 className="text-3xl md:text-4xl font-bold text-[#1E293B] mb-8 leading-tight">
+                            <h3 className="text-3xl md:text-5xl font-black text-main mb-6 md:mb-8 tracking-tighter leading-tight">
                                 Lo que somos y hacemos
                             </h3>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.2}>
-                            <p className="text-[#475569] text-lg leading-relaxed mb-8">
-                                <span className="text-[#1E293B] font-semibold">¿Qué es DIGITEC?</span> Somos un estudio de metamorfosis digital. Vemos los negocios no como estructuras estáticas, sino como organismos vivos que tienen el potencial de cambiar, mejorar y alcanzar nuevas alturas.
+                            <p className="text-sub text-base md:text-lg leading-relaxed mb-6 md:mb-8 font-light tracking-tight">
+                                <span className="text-main font-bold">¿Qué es DIGITEC?</span> Somos un estudio de metamorfosis digital. Vemos los negocios no como estructuras estáticas, sino como organismos vivos que tienen el potencial de cambiar, mejorar y alcanzar nuevas alturas.
                             </p>
-                            <p className="text-[#475569] text-lg leading-relaxed mb-8">
+                            <p className="text-sub text-base md:text-lg leading-relaxed mb-6 md:mb-8 font-light tracking-tight">
                                 Nos especializamos en tomar esa idea que hoy tienes en mente y darle las alas necesarias para que se convierta en una realidad sólida, ágil y visualmente impactante.
                             </p>
                         </ScrollReveal>
@@ -80,7 +80,7 @@ export const About = ({ className }: AboutProps) => {
                                         className="object-contain p-1"
                                     />
                                 </div>
-                                <span className="text-xs text-slate-400 font-medium tracking-wider">Metamorphosis v.2.4.0</span>
+                                <span className="text-[10px] text-mute font-light uppercase tracking-widest">Metamorphosis v.2.4.0</span>
                             </div>
                         </div>
                     </div>

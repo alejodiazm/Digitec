@@ -7,15 +7,15 @@ import { Mail, MapPin } from "lucide-react";
 
 export const Contact = () => {
     return (
-        <section id="contacto" className="py-24 bg-[#F8FAFC] relative border-t border-black/5">
+        <section id="contacto" className="py-16 md:py-24 bg-[#F8FAFC] relative border-t border-black/5">
             <Container>
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-10 md:mb-16">
                         <ScrollReveal>
-                            <h2 className="text-3xl md:text-5xl font-bold text-[#1E293B] mb-6">
+                            <h2 className="text-3xl md:text-5xl font-bold text-main mb-4 md:mb-6">
                                 Inicia tu Proyecto
                             </h2>
-                            <p className="text-[#475569] text-lg font-medium">
+                            <p className="text-sub text-base md:text-lg font-medium px-4">
                                 Cuéntanos sobre tus desafíos. Nosotros ponemos la tecnología.
                             </p>
                         </ScrollReveal>
@@ -26,16 +26,16 @@ export const Contact = () => {
                             <ScrollReveal delay={0.1}>
                                 <div className="space-y-6">
                                     <div>
-                                        <h3 className="text-[#1E293B] font-semibold mb-2 flex items-center gap-2">
+                                        <h3 className="text-main font-semibold mb-2 flex items-center gap-2">
                                             <Mail className="w-5 h-5 text-primary" /> Email
                                         </h3>
-                                        <p className="text-[#475569] font-medium">contacto@digitec.global</p>
+                                        <p className="text-sub font-medium">contacto@digitec.global</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-[#1E293B] font-semibold mb-2 flex items-center gap-2">
+                                        <h3 className="text-main font-semibold mb-2 flex items-center gap-2">
                                             <MapPin className="w-5 h-5 text-primary" /> Ubicación
                                         </h3>
-                                        <p className="text-[#475569] font-medium">Bogotá, Colombia</p>
+                                        <p className="text-sub font-medium">Bogotá, Colombia</p>
                                     </div>
                                 </div>
                             </ScrollReveal>
