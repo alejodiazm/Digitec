@@ -12,7 +12,7 @@ export const GlowCard = ({ children, className }: GlowCardProps) => {
     return (
         <motion.div
             className={cn(
-                "relative rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-white/20 hover:bg-white/10 group overflow-hidden",
+                "relative rounded-xl border border-black/5 bg-white/80 p-6 backdrop-blur-sm transition-colors hover:border-black/10 hover:bg-white/95 group overflow-hidden shadow-sm",
                 className
             )}
             initial={{ opacity: 0, y: 20 }}
