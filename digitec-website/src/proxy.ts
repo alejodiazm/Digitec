@@ -1,15 +1,14 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Simple in-memory rate limiter for demo purposes (would use Redis in production)
 const rateLimit = new Map();
 
-export function middleware(request: NextRequest) {
+// CAMBIO CLAVE: Se renombró de 'middleware' a 'proxy'
+export function proxy(request: NextRequest) {
     const response = NextResponse.next();
     const ip = request.headers.get("x-forwarded-for")?.split(",")[0] || "127.0.0.1";
 
-    // Rate Limiting Logic (Basic)
-    // Window: 1 minute, Max: 60 requests
+    // Tu lógica de Rate Limiting
     const now = Date.now();
     const windowMs = 60 * 1000;
 
@@ -21,37 +20,32 @@ export function middleware(request: NextRequest) {
             rateLimit.set(ip, { count: 1, startTime: now });
         } else {
             data.count++;
-            if (data.count > 100) { // Limit to 100 req/min
+            if (data.count > 100) {
                 return new NextResponse("Too Many Requests", { status: 429 });
             }
         }
     }
 
-    // Security Headers
+    // Tu lógica de Security Headers (CSP)
     const cspHeader = `
-    default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://va.vercel-scripts.com;
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
-    font-src 'self' data:;
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    frame-ancestors 'none';
-    frame-src https://challenges.cloudflare.com;
-    upgrade-insecure-requests;
-  `;
+        default-src 'self';
+        script-src 'self' 'unsafe-eval' 'unsafe-inline' https://challenges.cloudflare.com https://va.vercel-scripts.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' blob: data:;
+        font-src 'self' data:;
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        frame-ancestors 'none';
+        frame-src https://challenges.cloudflare.com;
+        upgrade-insecure-requests;
+    `;
 
-    // Replace newlines with spaces
     const contentSecurityPolicyHeaderValue = cspHeader
         .replace(/\s{2,}/g, " ")
         .trim();
 
-    response.headers.set(
-        "Content-Security-Policy",
-        contentSecurityPolicyHeaderValue
-    );
-
+    response.headers.set("Content-Security-Policy", contentSecurityPolicyHeaderValue);
     response.headers.set("X-DNS-Prefetch-Control", "on");
     response.headers.set("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");
     response.headers.set("X-Frame-Options", "DENY");
@@ -64,13 +58,6 @@ export function middleware(request: NextRequest) {
 
 export const config = {
     matcher: [
-        /*
-         * Match all request paths except for the ones starting with:
-         * - api (API routes)
-         * - _next/static (static files)
-         * - _next/image (image optimization files)
-         * - favicon.ico (favicon file)
-         */
         "/((?!api|_next/static|_next/image|favicon.ico).*)",
     ],
 };
