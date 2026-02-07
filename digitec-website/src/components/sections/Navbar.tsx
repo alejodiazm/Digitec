@@ -54,7 +54,7 @@ export const Navbar = () => {
                                     document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
                                 }}
                                 className={cn(
-                                    "text-sm font-medium transition-colors text-main hover:text-primary"
+                                    "text-sm font-medium transition-colors text-[#1E293B] hover:text-primary"
                                 )}
                             >
                                 {link.name}
@@ -72,7 +72,7 @@ export const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2 transition-colors text-main"
+                        className="md:hidden p-2 transition-colors text-[#1E293B]"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -85,39 +85,26 @@ export const Navbar = () => {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden bg-white/90 backdrop-blur-xl border-b border-black/5 overflow-hidden shadow-2xl"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="md:hidden bg-white border-b border-black/10 overflow-hidden"
                     >
-                        <Container className="py-8 flex flex-col gap-6">
-                            <div className="flex flex-col gap-4">
-                                {navLinks.map((link) => (
-                                    <Link
-                                        key={link.name}
-                                        href={link.href}
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
-                                            setIsMobileMenuOpen(false);
-                                        }}
-                                        className="text-xl font-bold tracking-wider text-main py-2 hover:text-primary transition-colors border-b border-black/[0.03] last:border-0 font-montserrat"
-                                    >
-                                        {link.name}
-                                    </Link>
-                                ))}
-                            </div>
-                            <Button
-                                variant="primary"
-                                size="lg"
-                                className="w-full border-0 shadow-xl bg-primary text-white hover:bg-primary-dark"
-                                onClick={() => {
-                                    document.querySelector(ROUTES.CONTACT)?.scrollIntoView({ behavior: 'smooth' });
-                                    setIsMobileMenuOpen(false);
-                                }}
-                            >
-                                Cotizar Ahora
-                            </Button>
+                        <Container className="py-4 flex flex-col gap-4">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                                        setIsMobileMenuOpen(false);
+                                    }}
+                                    className="text-[#1E293B] font-medium py-2 hover:text-primary block"
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
                         </Container>
                     </motion.div>
                 )}

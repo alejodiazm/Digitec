@@ -5,13 +5,12 @@
   --color-surface: #F1F5F9;
   --color-primary: #3B82F6;
   --color-primary-dark: #1E3A8A;
-  --color-primary-deep: #0F172A;
   --color-primary-light: #60A5FA;
 
-  /* Premium Light Evolution Palette - Phase 15 Strategic Alignment */
-  --color-indigo-brand: #1E3A8A;
+  /* Premium Light Evolution Palette - Phase 7 */
+  --color-indigo-brand: #4F46E5;
   --color-violet-brand: #8B5CF6;
-  --color-cyan-brand: #00D1FF;
+  --color-cyan-brand: #06B6D4;
   --color-amber-brand: #F59E0B;
 
   --color-accent-mint: #2DD4BF;
@@ -21,18 +20,6 @@
   --color-text-primary: #1E293B;
   --color-text-secondary: #475569;
   --color-border: rgba(30, 41, 59, 0.08);
-
-  /* Semantic Theme Variables - Phase 9 */
-  --color-on-light-primary: #1E293B;
-  --color-on-light-secondary: #475569;
-  --color-on-light-muted: #94A3B8;
-
-  --color-on-dark-primary: #F8FAFC;
-  --color-on-dark-secondary: #CBD5E1;
-  --color-on-dark-muted: #64748B;
-
-  --color-accent-on-light: #3B82F6;
-  --color-accent-on-dark: #60A5FA;
 
   --font-sans: "Montserrat", "Inter", sans-serif;
   --font-heading: "Montserrat", "Inter", sans-serif;
@@ -105,39 +92,14 @@
 :root {
   --background: #F8FAFC;
   --foreground: #1E293B;
-
-  /* Dynamic Text Variables - Forced Defaults (Phase 15 Alignment) */
-  --text-main: #1E293B;
-  --text-sub: #475569;
-  --text-mute: #94A3B8;
-  --accent-dynamic: #3B82F6;
-}
-
-/* Explicit class-based override for sections with themes */
-.theme-dark {
-  --text-main: #F8FAFC !important;
-  --text-sub: #CBD5E1 !important;
-  --text-mute: #64748B !important;
-  --accent-dynamic: #60A5FA !important;
 }
 
 body {
   background: var(--background);
-  color: var(--text-main);
-  font-family: var(--font-montserrat), sans-serif;
+  color: var(--foreground);
+  font-family: var(--font-sans);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-montserrat), sans-serif;
-  letter-spacing: -0.02em;
 }
 
 /* Premium Light Utilities */
@@ -158,21 +120,4 @@ h6 {
   border-color: var(--color-primary-light);
   box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.1);
   transform: translateY(-4px);
-}
-
-/* Base utilities for the dynamic variables */
-.text-main {
-  color: var(--text-main);
-}
-
-.text-sub {
-  color: var(--text-sub);
-}
-
-.text-mute {
-  color: var(--text-mute);
-}
-
-.text-accent-dynamic {
-  color: var(--accent-dynamic);
 }
