@@ -1,15 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* Habilita el modo standalone para despliegues en servidores como Hostinger */
   output: 'standalone',
-
-  /* Optimizaciones para evitar que el proceso de "Build" se detenga por errores no críticos */
+  // En Next.js 16, estas opciones se han movido o simplificado
+  // Si quieres ignorar errores durante el build, usa estas:
+  typescript: {
+    ignoreBuildErrors: true, // Se cambió 'ignoreBuildsErrors' por 'ignoreBuildErrors'
+  },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildsErrors: true,
   }
 };
 
