@@ -84,29 +84,41 @@ export const Navbar = () => {
             {/* Mobile Navigation */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white border-b border-black/10 overflow-hidden"
-                    >
-                        <Container className="py-4 flex flex-col gap-4">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 min-h-screen bg-white/95 backdrop-blur-md z-40 md:hidden pt-20"
+                        >
+                            <Container className="py-8 flex flex-col gap-6 items-center">
+                                {navLinks.map((link) => (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                                            setIsMobileMenuOpen(false);
+                                        }}
+                                        className="text-[#1E293B] font-medium text-xl py-2 hover:text-primary transition-colors block text-center w-full"
+                                    >
+                                        {link.name}
+                                    </Link>
+                                ))}
+                                <Button
+                                    variant="primary"
+                                    className="w-full max-w-[200px] mt-4 shadow-sm bg-primary text-white hover:bg-primary-dark"
+                                    onClick={() => {
+                                        document.querySelector(ROUTES.CONTACT)?.scrollIntoView({ behavior: 'smooth' });
                                         setIsMobileMenuOpen(false);
                                     }}
-                                    className="text-[#1E293B] font-medium py-2 hover:text-primary block"
                                 >
-                                    {link.name}
-                                </Link>
-                            ))}
-                        </Container>
-                    </motion.div>
+                                    Cotizar
+                                </Button>
+                            </Container>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </motion.header>

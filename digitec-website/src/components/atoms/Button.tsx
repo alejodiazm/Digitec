@@ -30,8 +30,8 @@ export const Button = ({
     const Component = as || motion.button;
 
     const variants = {
-        primary: "bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/20 border border-transparent",
-        secondary: "bg-[#F1F5F9] text-[#1E293B] hover:bg-slate-200 shadow-sm border border-black/5",
+        primary: "bg-primary text-white hover:bg-primary-dark shadow-md hover:shadow-lg hover:shadow-blue-500/30 border border-transparent hover:-translate-y-0.5",
+        secondary: "bg-[#F1F5F9] text-[#1E293B] hover:bg-slate-200 shadow-sm border border-black/5 hover:-translate-y-0.5",
         outline: "border border-black/10 text-[#475569] hover:bg-black/5 hover:text-[#1E293B] backdrop-blur-sm",
         ghost: "text-[#475569] hover:text-[#1E293B] hover:bg-black/5",
     };
@@ -53,7 +53,7 @@ export const Button = ({
             whileHover={{ y: -1 }}
             whileTap={{ scale: 0.98 }}
             disabled={isLoading || props.disabled}
-            {...props}
+            {...(props as any)}
         >
             {isLoading && <Loader2 className="w-5 h-5 animate-spin" />}
             {!isLoading && leftIcon}

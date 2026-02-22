@@ -10,7 +10,7 @@ export const Footer = () => {
     return (
         <footer className="bg-[#F1F5F9] border-t border-black/5 pt-16 pb-8">
             <Container>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-y-12 md:gap-12 mb-12">
                     {/* Brand Info */}
                     <div className="md:col-span-2 space-y-4">
                         <Logo />

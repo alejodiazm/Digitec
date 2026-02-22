@@ -36,10 +36,10 @@ export const About = ({ className }: AboutProps) => {
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.2}>
-                            <p className="text-[#475569] text-lg leading-relaxed mb-8">
-                                <span className="text-[#1E293B] font-semibold">¿Qué es DIGITEC?</span> Somos un estudio de metamorfosis digital. Vemos los negocios no como estructuras estáticas, sino como organismos vivos que tienen el potencial de cambiar, mejorar y alcanzar nuevas alturas.
+                            <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                                <span className="text-[#1E293B] font-bold">¿Qué es DIGITEC?</span> Somos un estudio de metamorfosis digital. Vemos los negocios no como estructuras estáticas, sino como organismos vivos que tienen el potencial de cambiar, mejorar y alcanzar nuevas alturas.
                             </p>
-                            <p className="text-[#475569] text-lg leading-relaxed mb-8">
+                            <p className="text-slate-600 text-lg leading-relaxed mb-8">
                                 Nos especializamos en tomar esa idea que hoy tienes en mente y darle las alas necesarias para que se convierta en una realidad sólida, ágil y visualmente impactante.
                             </p>
                         </ScrollReveal>

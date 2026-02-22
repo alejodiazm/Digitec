@@ -62,7 +62,7 @@ export const ContactForm = ({ className }: ContactFormProps) => {
         }
     };
 
-    const inputClasses = "w-full px-0 py-3 bg-transparent border-b border-black/10 focus:border-primary outline-none transition-all placeholder:text-slate-400 text-[#1E293B] focus:ring-0 rounded-none font-medium";
+    const inputClasses = "w-full px-4 py-3 bg-slate-50 border-b-2 border-slate-200 focus:border-primary focus:bg-white outline-none transition-all duration-300 placeholder:text-slate-400 text-[#1E293B] focus:ring-0 rounded-t-lg font-medium";
 
     return (
         <motion.div
@@ -134,7 +134,7 @@ export const ContactForm = ({ className }: ContactFormProps) => {
                 <input type="text" {...register("_honey")} className="hidden" tabIndex={-1} autoComplete="off" />
 
                 <div className="pt-2">
-                    <div className="mb-4 flex justify-start">
+                    <div className="mb-4 flex justify-start min-h-[65px]">
                         <Turnstile
                             sitekey={env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY}
                             onVerify={(token) => setToken(token)}

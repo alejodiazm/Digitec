@@ -336,8 +336,8 @@ export const Pricing = ({ className }: PricingProps) => {
                                                 <span className="text-3xl font-bold text-[#1E293B] tracking-tight">{plan.price}</span>
                                                 <span className="text-[#475569] text-sm font-medium">COP</span>
                                             </div>
-                                            <div className="text-xs text-[#475569] mt-1">
-                                                {category === "web" ? "Renovación: " : ""}<span className="text-slate-400">{plan.renewal}</span>
+                                            <div className="text-xs font-medium text-[#475569] mt-2">
+                                                {category === "web" ? "Renovación: " : ""}<span className="text-[#1E293B]">{plan.renewal}</span>
                                             </div>
                                         </div>
                                     </div>
