@@ -27,19 +27,19 @@ export const About = ({ className }: AboutProps) => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     <div>
                         <ScrollReveal>
-                            <h2 className="text-sm font-semibold text-primary mb-6 tracking-widest uppercase">
+                            <h2 className="text-sm font-semibold text-primary-light mb-6 tracking-widest uppercase">
                                 Nuestra Esencia
                             </h2>
-                            <h3 className="text-3xl md:text-4xl font-bold text-[#1E293B] mb-8 leading-tight">
+                            <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
                                 Lo que somos y hacemos
                             </h3>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.2}>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                                <span className="text-[#1E293B] font-bold">¿Qué es DIGITEC?</span> Somos un estudio de metamorfosis digital. Vemos los negocios no como estructuras estáticas, sino como organismos vivos que tienen el potencial de cambiar, mejorar y alcanzar nuevas alturas.
+                            <p className="text-slate-300 text-lg leading-relaxed mb-8">
+                                <span className="text-white font-bold">¿Qué es DIGITEC?</span> Somos un estudio de metamorfosis digital. Vemos los negocios no como estructuras estáticas, sino como organismos vivos que tienen el potencial de cambiar, mejorar y alcanzar nuevas alturas.
                             </p>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                            <p className="text-slate-300 text-lg leading-relaxed mb-8">
                                 Nos especializamos en tomar esa idea que hoy tienes en mente y darle las alas necesarias para que se convierta en una realidad sólida, ágil y visualmente impactante.
                             </p>
                         </ScrollReveal>

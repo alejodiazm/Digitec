@@ -246,10 +246,10 @@ export const Pricing = ({ className }: PricingProps) => {
                                     exit={{ opacity: 0, y: -10 }}
                                     transition={{ duration: 0.3 }}
                                 >
-                                    <h2 className="text-3xl md:text-5xl font-bold text-[#1E293B] mb-6">
+                                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
                                         {categoryInfo[category].title}
                                     </h2>
-                                    <p className="text-[#475569] text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+                                    <p className="text-slate-300 text-lg leading-relaxed max-w-2xl mx-auto font-medium">
                                         {categoryInfo[category].description}
                                     </p>
                                 </motion.div>
@@ -262,7 +262,7 @@ export const Pricing = ({ className }: PricingProps) => {
                                 onClick={() => setCategory("web")}
                                 className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${category === "web"
                                     ? "bg-primary text-white shadow-lg"
-                                    : "text-[#475569] hover:text-[#1E293B] hover:bg-black/5"
+                                    : "text-slate-300 hover:text-white hover:bg-white/10"
                                     }`}
                             >
                                 Desarrollo Web
@@ -271,7 +271,7 @@ export const Pricing = ({ className }: PricingProps) => {
                                 onClick={() => setCategory("branding")}
                                 className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${category === "branding"
                                     ? "bg-accent-lavender text-white shadow-lg"
-                                    : "text-[#475569] hover:text-[#1E293B] hover:bg-black/5"
+                                    : "text-slate-300 hover:text-white hover:bg-white/10"
                                     }`}
                             >
                                 Branding & Diseño
