@@ -300,7 +300,7 @@ export const Pricing = ({ className }: PricingProps) => {
                                     {plan.highlight && (
                                         <div className="absolute -bottom-10 -left-10 w-48 h-48 opacity-[0.03] grayscale pointer-events-none">
                                             <NextImage
-                                                src="/images/Isotipo Digitec.png"
+                                                src="/images/Isotipo_Digitec.png"
                                                 alt=""
                                                 fill
                                                 className="object-contain"

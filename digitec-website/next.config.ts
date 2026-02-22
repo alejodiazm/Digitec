@@ -1,23 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   output: 'standalone',
-  // Next.js 16 maneja ESLint y TypeScript de forma distinta
-  // Usamos estas opciones para que el build no se detenga en Hostinger
+  // En Next.js 16, TypeScript se configura aquí pero eslint se maneja vía CLI
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
+  images: {
+    qualities: [75, 100],
   },
-=======
-  /* config options here */
->>>>>>> parent of 8153f2c (Publicación Prueba)
-=======
-  /* config options here */
->>>>>>> parent of 8153f2c (Publicación Prueba)
 };
 
 export default nextConfig;

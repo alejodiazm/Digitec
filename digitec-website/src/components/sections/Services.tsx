@@ -16,7 +16,7 @@ const strategies = [
         description: "Tomamos tu visión desde su estado más pura y construimos su primer hogar en la web. Una base fuerte y acogedora, lista para recibir a tus visitantes.",
         highlight: "Ideal para Nuevos Negocios",
         color: "accent-mint",
-        image: "/images/Isotipo Digitec.png"
+        image: "/images/Isotipo_Digitec.png"
     },
     {
         icon: Feather, // Symbol of Flight/Lightness

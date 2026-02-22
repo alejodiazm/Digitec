@@ -5,7 +5,7 @@ export const env = createEnv({
     server: {
         NODE_ENV: z.enum(["development", "test", "production"]),
         CLOUDFLARE_TURNSTILE_SECRET_KEY: z.string().min(1),
-        RESEND_API_KEY: z.string().min(1).optional(), // Optional for now until integrated
+        RESEND_API_KEY: z.string().min(1),
     },
     client: {
         NEXT_PUBLIC_APP_URL: z.string().min(1),

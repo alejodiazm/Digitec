@@ -74,7 +74,7 @@ export const About = ({ className }: AboutProps) => {
                             <div className="mt-6 flex justify-between items-end">
                                 <div className="h-8 w-8 relative overflow-hidden rounded bg-slate-100 p-1">
                                     <NextImage
-                                        src="/images/Isotipo Digitec.png"
+                                        src="/images/Isotipo_Digitec.png"
                                         alt="Digitec Perfil"
                                         fill
                                         className="object-contain p-1"

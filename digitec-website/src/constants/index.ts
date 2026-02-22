@@ -1,7 +1,7 @@
 export const COMPANY_INFO = {
   name: "DIGITEC GLOBAL SAS",
   tagline: "Tecnología que impulsa tu visión al siguiente nivel",
-  email: "contacto@digitecglobalsas.com",
+  email: "contacto@digitec.global",
   whatsapp: {
     number: "+57 3028010431",
     link: "https://wa.me/573028010431?text=Hola%20Digitec,%20quiero%20impulsar%20mi%20proyecto.",
