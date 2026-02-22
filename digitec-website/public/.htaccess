@@ -1,0 +1,12 @@
+# Forzar la reescritura de URL hacia la aplicación Node.js corriendo por debajo
+# y forzar todo el tráfico a HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Si el archivo o carpeta existe físicamente en Hostinger (como imágenes o fonts cacheadas), sírvelo de una
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Si no existe físicamente, pása la petición al proxy de Node.js (Passenger)
+RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
