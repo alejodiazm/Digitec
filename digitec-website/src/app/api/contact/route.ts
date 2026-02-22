@@ -40,7 +40,7 @@ function isRateLimited(ip: string) {
 
 const resend = new Resend(env.RESEND_API_KEY);
 
-const COMPANY_EMAIL = "contacto@digitec.global";
+const COMPANY_EMAIL = "digitecglobalsas@gmail.com";
 const COMPANY_NAME = "DIGITEC GLOBAL SAS";
 
 export async function POST(request: Request) {

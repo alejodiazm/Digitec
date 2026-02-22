@@ -10,14 +10,14 @@ import { ArrowRight } from "lucide-react";
 
 export const Hero = () => {
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#F8FAFC]">
+        <section id="inicio" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#F8FAFC]">
             {/* Interactive Background */}
             <div className="absolute inset-0 z-0">
                 <NetworkCanvas />
             </div>
 
-            <Container className="relative z-10 pt-12 md:pt-16">
-                <Lamp className="pt-12 md:pt-20">
+            <Container className="relative z-10 pt-20 md:pt-32">
+                <Lamp className="pt-8 md:pt-16">
                     <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
                         {/* Badge */}
                         <ScrollReveal>
