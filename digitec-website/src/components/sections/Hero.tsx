@@ -16,8 +16,8 @@ export const Hero = () => {
                 <NetworkCanvas />
             </div>
 
-            <Container className="relative z-10 pt-20 md:pt-32">
-                <Lamp className="pt-8 md:pt-16">
+            <Container className="relative z-10 w-full">
+                <Lamp className="-mt-16 md:-mt-32">
                     <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
                         {/* Badge */}
                         <ScrollReveal>
