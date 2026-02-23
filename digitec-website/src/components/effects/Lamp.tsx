@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const Lamp = ({
-    children,
     className,
 }: {
-    children?: React.ReactNode;
     className?: string;
 }) => {
     return (
@@ -66,10 +64,6 @@ export const Lamp = ({
                 ></motion.div>
 
                 <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-gradient-to-b from-[#F8FAFC] to-transparent"></div>
-            </div>
-
-            <div className="relative z-50 flex -translate-y-36 md:-translate-y-56 flex-col items-center px-5 w-full">
-                {children}
             </div>
         </div>
     );
