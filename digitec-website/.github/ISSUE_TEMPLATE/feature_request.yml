@@ -1,0 +1,66 @@
+name: ✨ Feature Request
+description: Proponer una nueva funcionalidad o mejora
+title: "feat: [descripción de la feature]"
+labels: ["enhancement", "needs-review"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tu sugerencia. Cuéntanos qué necesitas y por qué.
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Tipo de solicitud
+      options:
+        - Nueva sección en la landing
+        - Mejora de UI/UX existente
+        - Nueva integración (API, servicio externo)
+        - Optimización de rendimiento
+        - Mejora de accesibilidad
+        - Nueva funcionalidad de backend
+        - Actualización de contenido/copy
+        - Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: ¿Qué problema resuelve?
+      description: ¿Hay una situación de frustración o necesidad de negocio que motiva esto?
+      placeholder: "Actualmente, cuando... / Los visitantes necesitan..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solución propuesta
+      description: ¿Cómo imaginas que debería funcionar?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: ¿Hay otras formas de resolver esto que hayas pensado?
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad estimada
+      options:
+        - 🔴 Alta — Impacta directamente la conversión o el negocio
+        - 🟡 Media — Mejora la experiencia pero no es urgente
+        - 🟢 Baja — Nice to have
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto adicional / Referencias
+      description: Links, screenshots de referencia, ejemplos en otros sitios

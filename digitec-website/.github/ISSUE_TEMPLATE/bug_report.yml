@@ -1,0 +1,88 @@
+name: 🐛 Bug Report
+description: Reportar un error o comportamiento incorrecto en el sitio
+title: "fix: [descripción corta del bug]"
+labels: ["bug", "needs-triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por reportar el bug. Completa los campos para que podamos reproducirlo y corregirlo rápidamente.
+
+  - type: dropdown
+    id: section
+    attributes:
+      label: Sección afectada
+      options:
+        - Hero / Inicio
+        - Navbar / Navegación
+        - About / Nosotros
+        - Services / Servicios
+        - Pricing / Planes
+        - Testimonials
+        - Contact / Contacto
+        - Footer
+        - Formulario de contacto
+        - API / Backend
+        - Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: ¿Qué ocurre?
+      description: Describe el comportamiento incorrecto
+      placeholder: "Al hacer click en el botón X, ocurre Y en lugar de Z"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+      placeholder: |
+        1. Ir a la sección '...'
+        2. Hacer click en '...'
+        3. Ver el error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado
+      placeholder: "Debería..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Dispositivo
+      options:
+        - Desktop (> 1024px)
+        - Tablet (768px - 1023px)
+        - Mobile (< 768px)
+        - Todos
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Navegador
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Edge
+        - Safari iOS
+        - Chrome Android
+        - Otro
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Videos
+      description: Arrastra imágenes o videos aquí
